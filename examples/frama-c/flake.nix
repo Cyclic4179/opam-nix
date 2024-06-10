@@ -35,7 +35,7 @@
           });
         };
 
-      in scope.overrideScope' overlay;
+      in scope.overrideScope overlay;
 
       defaultPackage = self.legacyPackages.${system}.frama-c;
     });

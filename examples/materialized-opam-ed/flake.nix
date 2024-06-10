@@ -10,7 +10,7 @@
         scope = materializedDefsToScope { } ./package-defs.json;
         overlay = self: super: { };
 
-      in scope.overrideScope' overlay;
+      in scope.overrideScope overlay;
 
       defaultPackage = self.legacyPackages.${system}.opam-ed;
 

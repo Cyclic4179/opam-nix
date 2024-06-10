@@ -12,7 +12,7 @@
           # The following line forces opam to choose the compiler from opam instead of the nixpkgs one
           ocaml-base-compiler = "*";
         };
-      in scope.overrideScope' (final: prev: {
+      in scope.overrideScope (final: prev: {
         "0install" = prev."0install".overrideAttrs (_: {
           preInstall = "cp _build/default/0install.install .";
           doNixSupport = false;
