@@ -54,7 +54,7 @@
         description = "Build multiple packages from a single workspace, and provide a development shell with some convinient tooling";
         path = ./templates/multi-package;
       };
-      templates.default = self.templates.simple;
+      templates.default = self.templates.multi-package;
 
       overlays = {
         ocaml-overlay = import ./src/overlays/ocaml.nix;
