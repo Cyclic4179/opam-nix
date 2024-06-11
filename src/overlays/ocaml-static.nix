@@ -20,9 +20,7 @@ let
       hardeningDisable = [ "pie" ] ++ oa.hardeningDisable or [ ];
     };
 
-    "conf-g++" = oa: {
-      nativeBuildInputs = oa.nativeBuildInputs ++ [ fake-cxx ];
-    };
+    "conf-g++" = oa: { nativeBuildInputs = oa.nativeBuildInputs ++ [ fake-cxx ]; };
 
     sodium = oa: {
       buildInputs = oa.buildInputs ++ [ final.nixpkgs.sodium-static ];
@@ -73,8 +71,7 @@ let
       '';
     };
 
-    opam-file-format = _: {
-      buildPhase = "make opam-file-format.cma opam-file-format.cmxa";
-    };
+    opam-file-format = _: { buildPhase = "make opam-file-format.cma opam-file-format.cmxa"; };
   };
-in applyOverrides prev overrides
+in
+applyOverrides prev overrides
